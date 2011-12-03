@@ -1,4 +1,5 @@
-f = open('data.csv', 'r')  
+from dbfpy import dbf
+file = open('data.csv', 'r')  
 for line in f:  
 	line =  line.split(',')  
 #	product = Product() 
