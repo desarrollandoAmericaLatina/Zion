@@ -102,7 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'lemon.urls'
+ROOT_URLCONF = 'zion.urls'
 
 TEMPLATE_DIRS = (
 	os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
@@ -122,7 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'lemon.robame',
+    'zion.robame',
 )
 
 # A sample logging configuration. The only tangible logging
