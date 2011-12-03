@@ -3,9 +3,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/static/css/style.css">
-		<title>Roba.me</title>
+		<title>{% block title %}{% endblock %}</title>
 		<script type="text/javascript" src="/static/js/jquery-1.6.4.min.js"></script>
-		<script type="text/javascript" src="/static/js/custom_index.js"></script>
+		{% block script %}{% endblock %}
 	</head>
 	<body>
 		<div id="wrap">
@@ -60,10 +60,7 @@
 					<div id="mas"><span><div id="icon-mas">más</div></span></div>
 				</div>	
 				<div id="square-map">
-					<div id="map">
-						
-					</div>
-					<div id="how-map">Para denunciar ubica el lugar en el mapa.</div>
+					{% block content-right %}{% endblock %}
 				</div>
 			</div>
 		</div>
