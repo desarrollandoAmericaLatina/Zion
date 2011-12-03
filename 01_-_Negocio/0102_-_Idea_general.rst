@@ -1,0 +1,12 @@
+.. header:: roba.me |limon| Registro de robos en un sólo clic
+
+  .. |limon| image:: 0101_-_Logo.png
+     :width: 1.2cm
+
+.. footer:: Equipo Zion |limon| Desarrolla América Latina
+
+============
+Idea general
+============
+
+La idea de negocio será avisar sobre robos cerca de un lugar de nuestro interés, en nuestro caso lo que se espera es acceder al aplicativo desde cualquier lugar y si es que nos han robado, indicar el lugar de robo en un mapa, con el tiempo este lugar de robo se irá haciendo más rankeado; la ventaja es que si una persona está registrada, podrá indicar lugares de interés para él y si sucede algún acto delictivo cerca al lugar que haya indicado como de su interés, recibirá alertas en su correo electrónico sobre sitios peligrosos cerca a él.
