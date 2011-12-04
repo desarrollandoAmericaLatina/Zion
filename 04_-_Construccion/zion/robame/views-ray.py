@@ -15,7 +15,7 @@ def registroUser(request):
 			usuario = form.cleaned_data['username']
 			correo = form.cleaned_data['email']
 			mensaje = 'Su cuenta está activa. Puede ingresar al servicio con el usuario. '+str(usuario)+'. Gracias, por usar el servicio.'
-			send_mail('Creación de cuenta - roba.me', mensaje, 'no-reply@robame.pe', [correo], fail_silently=False)
+			#send_mail('Creación de cuenta - roba.me', mensaje, 'no-reply@robame.pe', [correo], fail_silently=False)
 			return render_to_response('inscripcion.html', {'formValido': True})
 		else:
 			context = {'form': form, 'formValido': False}

@@ -32,7 +32,7 @@ class Punto(models.Model):
 	latitudCiudad = models.DecimalField(max_digits=13, decimal_places=11, unique=True, blank=False)
 	longitudCiudad = models.DecimalField(max_digits=13, decimal_places=11, unique=True, blank=False)
 	descripcion = models.TextField(blank=False)
-	usuario = models.ForeignKey(Usuario)
+	usuario = models.ForeignKey(User)
 	ciudad = models.ForeignKey(Ciudad)
 	def __unicode__(self):
 		return '%s' % (self.descripcion)

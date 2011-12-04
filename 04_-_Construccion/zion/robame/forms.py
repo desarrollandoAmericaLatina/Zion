@@ -3,6 +3,9 @@ from django import forms
 from django.db import models
 from robame.models import Asalto
 from robame.models import Usuario
+from django.contrib.auth.models import User
+
+#ux = User.objects.create_user(username)
 
 class AsaltoForm(forms.ModelForm):
 	class Meta:
@@ -14,7 +17,7 @@ class formUser(forms.ModelForm):
 	password = forms.CharField(label = 'Contraseña', widget=forms.PasswordInput)
 	email = forms.EmailField(label= 'Correo electrónico', max_length="100")
 	class Meta:
-		model = Usuario
+		model = User
 		exclude = ['first_name', 'last_name', 'is_staff', 'is_active', 'groups', 'last_login', 'date_joined', 'is_superuser', 'user_permissions']
 
 class LoginForm(forms.Form):
