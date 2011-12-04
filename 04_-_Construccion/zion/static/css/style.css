@@ -54,7 +54,8 @@ body {margin:0px; padding:0px; width:100%; height: 100%; background:url('../imag
 
 #ultimos-robos {padding:10px 10px 10px 10px; font-size:15px; list-style-type:none; background:#fff; -webkit-border-radius: 5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px; -khtml-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; border:1px solid #bbb;}
 
-#ultimos-robos .robo {border-bottom:1px solid #999; padding-bottom:10px; margin-bottom:10px; color:#444;}
+#ultimos-robos .robo {border-bottom: 1px solid #EBEBEB; padding-bottom:10px; padding-top:10px; margin-bottom:0px; color:#444;}
+#ultimos-robos .robo:hover {border-top:1px solid #0084B4; border-bottom:1px solid #0084B4; padding-top:9px;}
 #ultimos-robos .robo p {margin:0px;}
 #ultimos-robos .robo .fecha-robo {font-style:italic;}
 #ultimos-robos .robo .lugar {color:#00ADEF;}
@@ -71,8 +72,8 @@ body {margin:0px; padding:0px; width:100%; height: 100%; background:url('../imag
 #map {height:400px; border: 1px solid #2d4172; margin: 2px}
 #how-map{background:#fff; font-size:14px; padding:5px; margin-top:10px; color:#444; -webkit-border-radius: 5px;-moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;}
 #comentarioForm {display: none;}
-#comment textarea{width:480px; color: #000;font-family:'Sansation_Light';}
-#comment input {font-family:'orbitron'; width:248px; background: #d2d2d2; color:#fff; color:#444; border:1px solid #999; padding: 10px; -webkit-border-radius: 5px;-moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; }
+#comment textarea{width:400px; color: #000;font-family:'Sansation_Light';}
+#comment input {font-family:'orbitron'; width:208px; background: #d2d2d2; color:#fff; color:#444; border:1px solid #999; padding: 10px; -webkit-border-radius: 5px;-moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; }
 #tag-nubes {text-align:right;}
 #tag-nubes a {color:#fff; padding:5px; color:#444; background:#fff;}
 #tag-nubes a:hover {background:#444; color:#fff;}
