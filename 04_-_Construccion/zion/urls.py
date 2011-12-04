@@ -16,5 +16,6 @@ urlpatterns = patterns('',
 	url(r'^$', 'robame.views.index'),
 	url(r'^faq/', 'robame.views.faq'),
 	url(r'^mas/', 'robame.views.mas'),
+	url(r'^inscripcion/', 'robame.views.inscripcion'),
     url(r'^admin/', include(admin.site.urls)),
 )
