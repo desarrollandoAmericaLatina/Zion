@@ -1,7 +1,45 @@
 {% extends "base.html" %}
 {% block title %}Roba.me | Denuncias en un solo clic{% endblock %}
+{% block css %}<link rel="stylesheet" href="/static/css/style_mas.css">{% endblock %}
 {% block script %}
 	<script type="text/javascript" src="/static/js/custom_index.js"></script>
+{% endblock %}
+{% block info_usuario %}
+	{% if userTrue %}
+		<div id="info-user">
+			<div id="user-name">Linus Torvals
+				<a href="#">Cerrar Sesión</a>
+			</div>
+		</div>
+	{% else %}
+		<div id="pre-sesion">
+			¿Tienes Cuenta?
+			<a href="#">Iniciar Sesión</a>
+		</div>
+		<form>
+			<label>Usuario</label>
+			<input class="textbox" type="text">
+			<label>Password</label>
+			<input class="textbox" type="password">
+			<input id="btn-sesion" class="btn-session" type="button" value="Iniciar Sesión">
+		</form>			
+	{% endif %}
+{% endblock %}
+{% block content-left %}
+<div id="tag-nubes">
+	<a href="#" title="titulo" style='font-size: 10pt;'>acuchillamiento</a>
+	<a href="#" title="titulo" style='font-size: 20pt;'>asalto</a>
+	<a href="#" title="titulo" style='font-size: 15pt;'>loco</a>
+	<a href="#" title="titulo" style='font-size: 13pt;'>estafa</a>
+	<a href="#" title="titulo" style='font-size: 10pt;'>acuchillamiento</a>
+	<a href="#" title="titulo" style='font-size: 20pt;'>asalto</a>
+	<a href="#" title="titulo" style='font-size: 15pt;'>loco</a>
+	<a href="#" title="titulo" style='font-size: 20pt;'>asalto</a>
+	<a href="#" title="titulo" style='font-size: 15pt;'>loco</a>
+	<a href="#" title="titulo" style='font-size: 13pt;'>estafa</a>
+	<a href="#" title="titulo" style='font-size: 10pt;'>acuchillamiento</a>
+	<a href="#" title="titulo" style='font-size: 20pt;'>asalto</a>	
+</div>
 {% endblock %}
 {% block content-right %}
 <ul id="ultimos-robos">
@@ -13,10 +51,29 @@
 		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
 		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
 	</li>
+	<li class="robo">
+		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
+		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
+	</li>
+	<li class="robo">
+		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
+		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
+	</li>
+	<li class="robo">
+		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
+		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
+	</li>
+	<li class="robo">
+		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
+		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
+	</li>
+	<li class="robo">
+		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
+		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
+	</li>
 	<li class="robo last">
 		<span class="head-robo"><span class="fecha-robo">29 de Marzo 2011</span> a las 10:40 en <a class="lugar" href="#">Lima</a></span>
 		<p class="denuncia"><a href="#">#locosuelto</a>psj. Moscú. Loco tirando piedra.</p>
 	</li>
 </ul>
-<div id="how-map">Para denunciar ubica el lugar en el mapa.</div>
 {% endblock %}
