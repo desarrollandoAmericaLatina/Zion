@@ -25,11 +25,13 @@ body {margin:0px; padding:0px; width:100%; height: 100%; background:url('../imag
 #reg-robo form {height:140px;}
 #reg-robo form textarea {width:400px; height:100px; display:block;}
 #reg-robo form #enviar {float:right; display:block;}
-#sesion {top:10px; overflow:hidden; height:25px;  position:absolute; z-index:20;float:right; text-align:left; padding:10px; background:#fff; -webkit-border-radius: 10px;-moz-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px;}
+#sesion {top:10px; overflow:hidden; height:25px;  position:absolute; z-index:20;float:right; text-align:left; padding:15px 10px 10px 10px; background:#fff; -webkit-border-radius: 10px;-moz-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px;}
 #sesion .textbox {padding:5px; display:block;}
 #sesion .btn-session {margin-top:10px;border:0px; background:#444; color:#fff; padding:5px; -webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px; -khtml-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px;}
-#pre-sesion {border-bottom:1px dashed #2d2d2d; padding-bottom:10px;margin-bottom:5px;}
-#pre-sesion a {display:inline-block; padding:5px; background:#444; text-decoration:none; color:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;}
+#pre-sesion {border-bottom:1px dashed #2d2d2d; padding-bottom:17px;margin-bottom:5px;}
+#pre-sesion a {padding:5px; background:#444; text-decoration:none; color:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;}
+#user-name {}
+#user-name a {padding:5px; background:#444; text-decoration:none; color:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;     -khtml-border-radius: 5px; border-radius: 5px; }
 #content-left {float:left; width:430px; margin-top:100px;}
 #content-left #logo {padding:10px; width:160px; background:#0390D3; -webkit-border-radius: 20px;-moz-border-radius: 20px; -khtml-border-radius: 20px; border-radius: 20px; text-align:center;}
 #content-left #logo h1{margin:0px; padding:0px; color:#fff; font-family:'orbitron';  font-weight:normal;}
@@ -60,12 +62,17 @@ body {margin:0px; padding:0px; width:100%; height: 100%; background:url('../imag
 #ultimos-robos .last {border-bottom:0px; margin:0px;}
 #reg-robo #mas span {background:#fff; padding:10px; -webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px; -khtml-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px;}
 #mas {border:1px solid #aaa; background:#d2d2d2; -webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px; -khtml-border-radius: 5px     5px 5px 5px; border-radius: 0px 0px 5px 5px; padding:5px 0px 5px 0px;}
+#mas a {outline:0px;}
 #mas #icon-mas {background:url('../image/plus.png') no-repeat; width:40px; height:32px; margin:0px auto 0px auto; padding:8px 0px 0px 35px; color:#444;}
 #mas:hover {background:#ccc; cursor:pointer;}
-#mas span {background:#fff; display:block; width:67px;height:35px; margin:0px auto; -webkit-border-radius: 20px;-moz-border-radius: 20px; -khtm    l-border-radius: 20px; border-radius: 20px; padding:5px; border:1px solid #aaa;}
+#mas span {background:#fff; display:block; width:67px;height:35px; margin:0px auto; -webkit-border-radius: 20px;-moz-border-radius: 20px; -khtml-border-radius: 20px; border-radius: 20px; padding:5px; border:1px solid #aaa;}
 /*#reg-robo #mas span a {color:#444; padding:6px 5px 6px 35px; font-weight:bold; background:url('../image/plus.png') no-repeat; text-decoration:none;} */
 #square-map {float:right; width:500px; height:300px; background:#3C83BF; margin-top:100px;}
 #map {height:300px;}
-#how-map{background:#fff; font-size:14px; padding:5px; margin-top:10px; color:#444; -webkit-border-radius: 5px;-moz-border-radius: 5px; -    khtml-border-radius: 5px; border-radius: 5px;}
+#how-map{background:#fff; font-size:14px; padding:5px; margin-top:10px; color:#444; -webkit-border-radius: 5px;-moz-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;}
+#tag-nubes {text-align:center;}
+#tag-nubes a {color:#fff; padding:5px; color:#444; background:#fff;}
+#tag-nubes a:hover {background:#444; color:#fff;}
+
 
 
