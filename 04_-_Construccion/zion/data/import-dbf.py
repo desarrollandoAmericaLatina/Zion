@@ -17,11 +17,8 @@ ado = connection.cursor()
 # - PROV (3) --> provincia
 # - DIST (4) --> distrito
 
-#for item in range(len(dbfFile)):
-for item in range(5):
+for item in range(len(dbfFile)):
 	sql = "INSERT INTO robame_ciudad(codigoCiudad, latitudCiudad, longitudCiudad, nombreCiudad, departamento, provincia, distrito) VALUES ('%s',%f,%f,'%s','%s','%s','%s')" % (dbfFile[item][4], dbfFile[item][13], dbfFile[item][14], dbfFile[item][5].replace("'", ""), dbfFile[item][1], dbfFile[item][2], dbfFile[item][3])
 	ado.execute(sql)
 connection.commit()
 connection.close()
-#	print Decimal(dbfFile[item][13])
-#	print dbfFile[item][14]
