@@ -16,6 +16,6 @@ urlpatterns = patterns('',
 	url(r'^$', 'robame.views-cristhian.index'),
 	url(r'^faq/', 'robame.views-cristhian.faq'),
 	url(r'^mas/', 'robame.views-cristhian.mas'),
-	url(r'^inscripcion/', 'robame.views-cristhian.inscripcion'),
+	url(r'^inscripcion/', 'robame.views-ray.registroUser'),
     url(r'^admin/', include(admin.site.urls)),
 )

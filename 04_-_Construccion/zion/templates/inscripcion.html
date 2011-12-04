@@ -4,6 +4,9 @@
 {% block script %}
 	<script type="text/javascript" src="/static/js/custom.js"></script>
 {% endblock %}
+{% block body %}
+	<body>
+{% endblock %}
 {% block info_usuario %}
 	{% if userTrue %}
 		<div id="info-user">
@@ -43,10 +46,16 @@
 	<div id="mas"><span><a href="/mas/"><div id="icon-mas">más</div></a></span></div>
 {% endblock %}
 {% block content-right %}
+{% if not formValido %}
+	<form action="/inscripcion/" method="post">{% csrf_token %}
+		{{form.as_p}}
+		<input id="btn-registro" type="submit" value"Registrar"/>
+	</form>
+{% else %}
 <h5>Has sido registrado en manera exitosa.</h5>
 <p>
 Si tiene dudas, contactanos en <a href="#">informes@roba.me</a>
 </p>
-<p>Estos son algunos de los temas más relevantes, puedes revisarlos haciendo click en el tema que interese.</p>
-
+<p>Estos son algunos de los temas más relevantes, puedes revisarlos haciendo click en el tema que interese.</p>	
+{% endif %}
 {% endblock %}

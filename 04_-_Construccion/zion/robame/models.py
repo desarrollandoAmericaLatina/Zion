@@ -10,8 +10,8 @@ class Usuario(User):
 
 class Ciudad(models.Model):
 	codigoCiudad = models.CharField(max_length=6, verbose_name="Centro poblado", help_text="Indique el código del centro poblado", null=False, blank=False, primary_key=True)
-	latitudCiudad = models.DecimalField(max_digits=13, decimal_places=11, verbose_name="Latitud", help_text="Indique la latitud")
-	longitudCiudad = models.DecimalField(max_digits=13, decimal_places=11, verbose_name="Longitud", help_text="Indique la longitud")
+	latitudCiudad = models.DecimalField(max_digits=17, decimal_places=15, verbose_name="Latitud", help_text="Indique la latitud")
+	longitudCiudad = models.DecimalField(max_digits=17, decimal_places=15, verbose_name="Longitud", help_text="Indique la longitud")
 	nombreCiudad = models.CharField(max_length=80, verbose_name="Ciudad", help_text="Indique el nombre de la ciudad")
 	departamento = models.CharField(max_length=80, verbose_name="Departamento", help_text="Indique el nombre del departamento")
 	provincia = models.CharField(max_length=80, verbose_name="Provincia", help_text="Indique el nombre de la provincia")
@@ -20,12 +20,11 @@ class Ciudad(models.Model):
 		return '%s' % (self.codigoCiudad)
 
 class Asalto(models.Model):
-	latitud = models.DecimalField(max_digits=13, decimal_places=11, verbose_name="Latitud", help_text="Indique la latitud")
-	longitud = models.DecimalField(max_digits=13, decimal_places=11, verbose_name="Longitud", help_text="Indique la longitud")
+	latitud = models.DecimalField(max_digits=17, decimal_places=15, verbose_name="Latitud", help_text="Indique la latitud")
+	longitud = models.DecimalField(max_digits=17, decimal_places=15, verbose_name="Longitud", help_text="Indique la longitud")
 	fecha = models.DateField(default=datetime.date.today(), verbose_name="Fecha", help_text="Indique la fecha", null=True)
-	hora = models.TimeField(default=datetime.datetime.today().time(), max_length=12, verbose_name="Hora", help_text="Indique la hora")
+	hora = models.TimeField(default=datetime.datetime.today().time(), max_length=12, verbose_name="Hora", help_text="Indique la hora", null=True)
 	descripcion = models.TextField(max_length=160, blank=False)
-	ciudad = models.ForeignKey(Ciudad)
 	def __unicode__(self):
 		return '%s' % (self.descripcion)
 
