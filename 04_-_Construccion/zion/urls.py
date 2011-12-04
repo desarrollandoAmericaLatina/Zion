@@ -13,10 +13,11 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-	url(r'^$', 'robame.views-cristhian.index'),
-	url(r'^login/$', 'robame.views-ray.loginView'),
-	url(r'^faq/', 'robame.views-cristhian.faq'),
-	url(r'^mas/', 'robame.views-cristhian.mas'),
-	url(r'^inscripcion/', 'robame.views-ray.registroUser'),
+	url(r'^$', 'robame.views.index'),
+	url(r'^login/$', 'robame.views.loginView'),
+	url(r'^faq/', 'robame.views.faq'),
+	url(r'^mas/', 'robame.views.mas'),
+	url(r'^inscripcion/', 'robame.views.registroUser'),
+	url(r'^mapa/([^/]+)/([^/]+)/$', 'robame.views.coordenada'),
     url(r'^admin/', include(admin.site.urls)),
 )
