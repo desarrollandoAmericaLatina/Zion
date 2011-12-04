@@ -4,8 +4,8 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'enciso.leo@gmail.com'
-EMAIL_HOST_PASSWORD = 'enciso.leo@gmail.com'
+EMAIL_HOST_USER = 'robameperu2011@gmail.com'
+EMAIL_HOST_PASSWORD = 'Passw0rdR2D2'
 EMAIL_PORT = 587
 
 ADMINS = (

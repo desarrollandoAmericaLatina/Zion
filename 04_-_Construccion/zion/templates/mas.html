@@ -46,37 +46,11 @@
 {% endblock %}
 {% block content-right %}
 <ul id="ultimos-robos">
-	<li class="robo first">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:05 en <a class="lugar" href="#">Huancayo</a></span>
-		<p class="denuncia"><a href="#">#acuchillamiento</a>en el Jr. Azangaro tengan cuidado esta peligrosa la zona</p>
-	</li>
-	<li class="robo">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
-	</li>
-	<li class="robo">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
-	</li>
-	<li class="robo">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
-	</li>
-	<li class="robo">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
-	</li>
-	<li class="robo">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
-	</li>
-	<li class="robo">
-		<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
-	</li>
-	<li class="robo last">
-		<span class="head-robo"><span class="fecha-robo">29 de Marzo 2011</span> a las 10:40 en <a class="lugar" href="#">Lima</a></span>
-		<p class="denuncia"><a href="#">#locosuelto</a>psj. Moscú. Loco tirando piedra.</p>
-	</li>
+		{% for comentario in comentarios %}
+		<li class="robo">
+			<span class="head-robo"><span class="fecha-robo">{{comentario.fecha}}</span> a las {{comentario.hora}} en <a class="lugar" href="#">{{comentario.ciudad}}</a></span>
+			<p class="denuncia">{{comentario.descripcion}}</p>
+		</li>
+		{% endfor %}
 </ul>
 {% endblock %}

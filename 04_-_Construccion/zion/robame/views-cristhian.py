@@ -7,10 +7,18 @@ from robame.forms import AsaltoForm
 from django.template import RequestContext
 
 def faq(request):
-	return render_to_response('faq.html',{})
+	comentarios = getComentarios()
+	if comentarios.count >= 3:
+		comentarios = comentarios[:3]
+	context = { 'comentarios': comentarios}
+	return render_to_response('faq.html',context)
 
 def mas(request):
-	return render_to_response('mas.html',{})
+	comentarios = getComentarios()
+	if comentarios.count >= 10:
+		comentarios = comentarios[:10]
+	context = { 'comentarios': comentarios}
+	return render_to_response('mas.html',context)
 
 def index_(request, id):
 	return HttpResponseRedirect('/')
@@ -62,4 +70,8 @@ def getComentarios():
 	return comentarios
 	
 def inscripcion(request):
-	return render_to_response('inscripcion.html',{})
+	comentarios = getComentarios()
+	if comentarios.count >= 3:
+		comentarios = comentarios[:3]
+	context = { 'comentarios': comentarios}
+	return render_to_response('inscripcion.html',context)
