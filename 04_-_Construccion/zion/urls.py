@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
 	url(r'^$', 'robame.views-cristhian.index'),
+	url(r'^login/$', 'robame.views-ray.loginView'),
 	url(r'^faq/', 'robame.views-cristhian.faq'),
 	url(r'^mas/', 'robame.views-cristhian.mas'),
 	url(r'^inscripcion/', 'robame.views-ray.registroUser'),

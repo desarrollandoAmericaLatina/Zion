@@ -3,7 +3,7 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from robame.models import Asalto, Tag, Ciudad
-from robame.forms import AsaltoForm
+from robame.forms import AsaltoForm, LoginForm,formUser
 from django.template import RequestContext
 
 def faq(request):
@@ -24,6 +24,12 @@ def index_(request, id):
 	return HttpResponseRedirect('/')
 	
 def index(request):
+	user = request.user
+	if user is not None and user.is_active:
+		isLogin = True
+	else:
+		isLogin = False
+		
 	form = AsaltoForm()
 	if request.method == 'POST':
 		asaltoForm = AsaltoForm(request.POST)
@@ -34,13 +40,13 @@ def index(request):
 			saveTags(descripcion_, asalto[0].id)
 			return HttpResponseRedirect('/')
 		else:
-			context = {'asaltoForm': asaltoForm, 'envioValido': False}
+			context = {'asaltoForm': asaltoForm,'isLogin':isLogin,'loginForm':LoginForm(), 'envioValido': False}
 			return render_to_response('index.html',context)
 	else:
 		comentarios = getComentarios()
 		if comentarios.count >= 3:
 			comentarios = comentarios[:3]
-		context = {'asaltoForm': form, 'envioValido': True, 'comentarios': comentarios}
+		context = {'asaltoForm': form, 'envioValido': True, 'isLogin':isLogin,'loginForm':LoginForm(),'comentarios': comentarios}
 		return render_to_response('index.html',context)
 
 def getCiudad(latitud, longitud):

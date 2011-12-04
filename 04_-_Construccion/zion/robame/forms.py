@@ -22,4 +22,4 @@ class formUser(forms.ModelForm):
 
 class LoginForm(forms.Form):
 	username = forms.CharField(label = "Nombre de usuario", max_length=50)
-	passwd = forms.CharField(label="Contraseña", widget = forms.PasswordInput)
+	password = forms.CharField(label="Contraseña", widget = forms.PasswordInput)
