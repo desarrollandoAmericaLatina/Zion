@@ -22,8 +22,8 @@ class Ciudad(models.Model):
 class Asalto(models.Model):
 	latitud = models.DecimalField(max_digits=17, decimal_places=15, verbose_name="Latitud", help_text="Indique la latitud")
 	longitud = models.DecimalField(max_digits=17, decimal_places=15, verbose_name="Longitud", help_text="Indique la longitud")
-	fecha = models.DateField(default=datetime.date.today(), verbose_name="Fecha", help_text="Indique la fecha", null=True)
-	hora = models.TimeField(default=datetime.datetime.today().time(), max_length=12, verbose_name="Hora", help_text="Indique la hora", null=True)
+	fecha = models.DateField(default=datetime.date.today(), verbose_name="Fecha", help_text="Indique la fecha")
+	hora = models.TimeField(default=datetime.datetime.today().time(), max_length=12, verbose_name="Hora", help_text="Indique la hora")
 	descripcion = models.TextField(max_length=160, blank=False)
 	def __unicode__(self):
 		return '%s' % (self.descripcion)

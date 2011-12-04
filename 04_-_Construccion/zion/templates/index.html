@@ -40,7 +40,7 @@
 		</script>
 {% endblock %}
 {% block body %}
-	<body onload="getGeolocation()" onunload="GUnload()">
+	<body onload="getGeolocation()">
 {% endblock %}	
 {% block info_usuario %}
 	{% if userTrue %}
@@ -65,19 +65,13 @@
 {% endblock %}
 {% block content-left %}
 	<ul id="ultimos-robos">
-<a href="javascript:obtener_localizacion();">Mostrar coordenadas</a>
-		<li class="robo first">
-			<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:05 en <a class="lugar" href="#">Huancayo</a></span>
-			<p class="denuncia"><a href="#">#acuchillamiento</a>en el Jr. Azangaro tengan cuidado esta peligrosa la zona</p>
-		</li>
+
+		{% for comentario in comentarios %}
 		<li class="robo">
-			<span class="head-robo"><span class="fecha-robo">28 de Marzo 2011</span> a las 20:10 en <a class="lugar" href="#">Lima</a></span>
-			<p class="denuncia"><a href="#">#roboalpaso</a>en la av. Salaverry no vaya por ahy.</p>
+			<span class="head-robo"><span class="fecha-robo">{{comentario.fecha}}</span> a las {{comentario.hora}} en <a class="lugar" href="#">{{comentario.ciudad}}</a></span>
+			<p class="denuncia">{{comentario.descripcion}}</p>
 		</li>
-		<li class="robo last">
-			<span class="head-robo"><span class="fecha-robo">29 de Marzo 2011</span> a las 10:40 en <a class="lugar" href="#">Lima</a></span>
-			<p class="denuncia"><a href="#">#locosuelto</a>psj. Moscú. Loco tirando piedra.</p>
-		</li>
+		{% endfor %}
 	</ul>
 	<div id="mas"><span><a href="/mas/"><div id="icon-mas">más</div></a></span></div>
 {% endblock %}

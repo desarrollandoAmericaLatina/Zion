@@ -7,7 +7,7 @@ from robame.models import Usuario
 class AsaltoForm(forms.ModelForm):
 	class Meta:
 		model = Asalto
-		exclude = ('fecha','hora',)
+		exclude = ['fecha', 'hora']
 		
 class formUser(forms.ModelForm):
 	username = forms.CharField(label = 'Nombre de usuario', max_length=50)
